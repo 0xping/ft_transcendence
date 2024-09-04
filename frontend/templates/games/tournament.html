@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ game_name }} Tournament
+{% endblock title %}
+
+{% block description %}
+{{ game_name }} Tournament
+{% endblock description %}
+
+{% block keywords %}
+{{ game_name }} Tournament, tournament, {{ game_name }}
+{% endblock keywords %}
+
+{% block content %}
+{% include "includes/nav.html" %}
+<h1>{{ game_name }} Tournament</h1>
+<p>Tournament ID: {{ tournament_id }}</p>
+{% endblock content %}

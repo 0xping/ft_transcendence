@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ game_name }} page
+{% endblock title %}
+
+{% block description %}
+waiting for an opponent
+{% endblock description %}
+
+{% block keywords %}
+waiting for an opponent, match, opponent
+{% endblock keywords %}
+
+{% block content %}
+{% include "includes/nav.html" %}
+<h1>{{ game_name }} Match</h1>
+<p>Match ID: {{ match_id }}</p>
+{% if tournament_id %}
+<p>Tournament ID: {{ tournament_id }}</p>
+{% endif %}
+<a href="/"> linkkkkkkkk </a>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{% block title %} transcendence {% endblock title %}</title>
+    <meta
+      name="description"
+      content="{% block description %}Transcendence - An online multiplayer game platform{% endblock description %}"
+    />
+    <meta
+      name="keywords"
+      content="{% block keywords %}transcendence, online game, multiplayer, pong{% endblock keywords %}"
+    />
+	<link rel="stylesheet" href="{% static "styles/normalize.css" %}">
+
+</head>
+<body>
+	<div id="root" data-ssr>{% block content %}{% endblock content %}</div>
+	<script src="{% static "main.js" %}" type="module"></script>
+</body>
+</html>
