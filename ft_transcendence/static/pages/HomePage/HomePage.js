@@ -1,73 +1,53 @@
 // demo page
 
 import BaseComponent from "../../components/BaseComponent.js";
+import "../../components/CustomComponents/CustomInput.js";
 
 class HomePage extends BaseComponent {
 	_createInitialState() {
-		return { count: 0, incrementCount: 0, decrementCount: 0 };
+		return {};
 	}
 
 	async render() {
 		this.innerHTML = `
-            <style>
-                .home { padding: 20px; text-align: center; }
-                button { margin: 10px; padding: 5px 10px; font-size: 16px; }
-            </style>
-            <div class="home">
-                <h2 id="count">Counter: ${this._state.count}</h2>
-                <button id="increment">Increment</button>
-                <button id="decrement">Decrement</button>
-				<br>
-				<a href="/games/rps/match/4/">Home</a>
-				<h2 id="increment_count">increment_count : ${this._state.incrementCount} </h2>
-				<h2 id="decrement_count">decrement_count : ${this._state.decrementCount} </h2>
-            </div>
-        `;
+			  <section>
+				<div class="hero-text">
+					<h1>WELCOME TO YOUR <span>GAME-HUB</span></h1>
+					<p>Discover endless fun and competition at GameHub</p>
+					<p>Challenge your friends in our top-rated games</p>
+					<custom-button> Join </custom-button>
+				</div>
+				<text-slider data-text="Compete and Win;Play Anytime;Anywhere;Join the Community Have Fun;Engage with Friends;Compete and Win" ></text-slider>
+				<div class="floating-icons">
+					<img src="/static/assets/images/floating_icon1.png" data-speed="0" alt="Icon 1" class="icon icon1" />
+					<img src="/static/assets/images/floating_icon2.png" data-speed="-0" alt="Icon 2" class="icon icon2" />
+					<img src="/static/assets/images/floating_icon3.png" data-speed="0" alt="Icon 3" class="icon icon3" />
+					<img src="/static/assets/images/floating_icon4.png" data-speed="-0" alt="Icon 4" class="icon icon4" />
+				</div>
+			</section>
+		`;
 
 
 
-		this._renderPartial(); // Trigger partial render
+		this._renderPartial();
 	}
 
-	renderCount(newValue) {
 
-		const countElement = this.querySelector('#count');
-		if (countElement) {
-			countElement.textContent = "Counter: " + newValue;
-		}
-	}
-
-	renderIncrementCount(newValue) {
-		const countElement = this.querySelector('#increment_count');
-		if (countElement) {
-			countElement.textContent = "increment_count: " + newValue;
-		}
-	}
-
-	renderDecrementCount(newValue) {
-		const countElement = this.querySelector('#decrement_count');
-		if (countElement) {
-			countElement.textContent = "decrement : " + newValue;
-		}
-	}
 
 	addEventListeners() {
-		// Register the render function for 'count'
-		console.log({ ...this });
-		this.addRenderFunction('count', (newValue) => { this.renderCount(newValue) });
-		this.addRenderFunction('decrementCount', (newValue) => { this.renderDecrementCount(newValue) });
-		this.addRenderFunction('incrementCount', (newValue) => { this.renderIncrementCount(newValue) });
+		document.addEventListener("mousemove", (e) => {
+			this.querySelectorAll(".floating-icons img").forEach((icon) => {
+				const position = icon.getAttribute("data-speed");
+				const x = (window.innerWidth - e.pageX * position) / 200;
+				const y = (window.innerHeight - e.pageY * position) / 200;
 
-		this.querySelector('#increment').addEventListener('click', () => {
-			this.setState({ count: this._state.count + 1 });
-			this.setState({ incrementCount: this._state.incrementCount + 1 });
-		});
-		this.querySelector('#decrement').addEventListener('click', () => {
-			this.setState({ count: this._state.count - 1 });
-			this.setState({ decrementCount: this._state.decrementCount + 1 });
+				icon.style.transform = `translateX(${x}px) translateY(${y}px)`;
+				icon.s
+			});
 		});
 	}
 }
+
 
 if (!customElements.get('home-page')) {
 	customElements.define('home-page', HomePage);

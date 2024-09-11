@@ -11,7 +11,6 @@ let routes = {
 		elementTag: 'home-page',
 		title: 'HomePage',
 		meta: [
-			{ title: 'Home Page' },
 			{ description: 'Welcome to the Home Page' },
 		],
 	},
@@ -21,7 +20,15 @@ let routes = {
 		elementTag: 'match-page',
 		title: 'match page',
 		meta: [
-			{ title: 'match Page' },
+			{ description: 'Welcome to the match Page' },
+		],
+	},
+
+	'/signin/': {
+		componentName: 'SingIn',
+		elementTag: 'sing-in-page',
+		title: 'sign in page',
+		meta: [
 			{ description: 'Welcome to the match Page' },
 		],
 	}

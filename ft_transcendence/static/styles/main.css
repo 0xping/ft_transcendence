@@ -1,0 +1,26 @@
+@import url("fonts.css");
+@import url("colors.css");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-primary);
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Syncopate", "Impact", "Arial Black", sans-serif;
+  font-weight: 700;
+}

@@ -43,6 +43,11 @@ class Router {
 				}
 
 				await import(`../pages/${route.componentName}/${route.componentName}.js`);
+				const stylesLink = document.createElement("link");
+				stylesLink.rel = "stylesheet";
+				stylesLink.href = `/static/pages/${route.componentName}/${route.componentName}.css`;
+				document.head.appendChild(stylesLink);
+
 				const componentElement = document.createElement(route.elementTag);
 
 

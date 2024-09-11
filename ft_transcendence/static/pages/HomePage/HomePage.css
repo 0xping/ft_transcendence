@@ -1,0 +1,19 @@
+@keyframes float {
+  0% {
+    translate: 0 0px;
+  }
+  50% {
+    translate: 0 -30px;
+  }
+  100% {
+    translate: 0 0px;
+  }
+}
+
+.home-page__section {
+  padding: 20px;
+}
+
+.floating-icons img {
+  animation: float 8s ease-in-out infinite;
+}
