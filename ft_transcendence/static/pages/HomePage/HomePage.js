@@ -41,13 +41,14 @@ class HomePage extends BaseComponent {
 
 	addEventListeners() {
 		document.addEventListener("mousemove", (e) => {
-			this.querySelectorAll(".floating-icons img").forEach((icon) => {
-				const position = icon.getAttribute("data-speed");
+			this.querySelectorAll(".floating-icons img, .gradients .gradient").forEach((icon) => {
+				const position = icon.getAttribute("data-speed") || 2;
 				const x = (window.innerWidth - e.pageX * position) / 200;
 				const y = (window.innerHeight - e.pageY * position) / 200;
 				icon.style.transform = `translateX(${x}px) translateY(${y}px)`;
-				icon.s
 			});
+
+
 		});
 	}
 }
