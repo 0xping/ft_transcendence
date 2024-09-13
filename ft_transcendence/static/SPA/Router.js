@@ -40,17 +40,18 @@ class Router {
 			try {
 				if (!globalStore.initialLoad) {
 					this.app.rootElement.innerHTML = "";
+					let cssFile = `/static/pages/${route.componentName}/${route.componentName}.css`;
+					const hasCssFile = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).some(link => link.href.includes(cssFile));
+					if (!hasCssFile) {
+						const stylesLink = document.createElement("link");
+						stylesLink.rel = "stylesheet";
+						stylesLink.href = cssFile;
+						document.head.appendChild(stylesLink);
+					}
 				}
 
 				await import(`../pages/${route.componentName}/${route.componentName}.js`);
-				const stylesLink = document.createElement("link");
-				stylesLink.rel = "stylesheet";
-				stylesLink.href = `/static/pages/${route.componentName}/${route.componentName}.css`;
-				document.head.appendChild(stylesLink);
-
 				const componentElement = document.createElement(route.elementTag);
-
-
 				if (!globalStore.initialLoad) {
 					this.app.rootElement.appendChild(componentElement);
 				}
