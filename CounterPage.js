@@ -1,6 +1,6 @@
 // demo page
 
-import BaseComponent from "../components/BaseComponent.js";
+import BaseComponent from "./ft_transcendence/static/components/BaseComponent.js";
 
 class CounterPage extends BaseComponent {
 	_createInitialState() {

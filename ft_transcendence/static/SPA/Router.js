@@ -63,7 +63,7 @@ class Router {
 			}
 		} else {
 			console.log("no matching route");
-			console.log(path);
+			console.log(path, route);
 
 			this.displayNotFound();
 		}

@@ -2,9 +2,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # /home
+    # auth
+    path('login/', views.login, name='login'),
+    path('signup/', views.signup, name='signup'),
+
+    # /
     path('', views.home, name='home'),
-    path('dashboard', views.dashboard, name='dashboard'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 
     # game
     path('games/<str:game_name>/', views.game_home, name='game_home'),

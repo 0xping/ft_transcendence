@@ -23,7 +23,7 @@ class HomePage extends BaseComponent {
 						<p>Discover endless fun and competition at GameHub</p>
 						<p>Challenge your friends in our top-rated games</p>
 						<a href="/games/rps/match/4/">
-							<button is="custom-button" type="primary" size="large">PLAY NOW</button>
+							<button class = "primary large">PLAY NOW</button>
 						</a>
 					</div>
 					<text-slider data-text="Compete and Win;Play Anytime;Anywhere;Join the Community Have Fun;Engage with Friends;Compete and Win"></text-slider>

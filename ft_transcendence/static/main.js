@@ -24,10 +24,10 @@ let routes = {
 		],
 	},
 
-	'/signin/': {
-		componentName: 'SingIn',
-		elementTag: 'sing-in-page',
-		title: 'sign in page',
+	'/login/': {
+		componentName: 'LoginPage',
+		elementTag: 'login-page',
+		title: 'log in page',
 		meta: [
 			{ description: 'Welcome to the match Page' },
 		],

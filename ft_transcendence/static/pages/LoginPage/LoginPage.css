@@ -1,0 +1,55 @@
+@import url("../../styles/components/button.css");
+
+.loginPage h1 {
+  margin: 100px auto;
+  font-size: clamp(30px, 5vw, 40px);
+  text-align: center;
+}
+
+.loginPage h1 span {
+  color: var(--primary);
+}
+
+.loginPage .loginForm {
+  background: var(--bg-secondary);
+  padding: 45px;
+  border-radius: 50px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.loginPage .loginForm button.intra {
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.loginPage .loginForm {
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #5c6474;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 10px;
+}
+
+.divider-text {
+  font-size: 16px;
+  color: #5c6474;
+}

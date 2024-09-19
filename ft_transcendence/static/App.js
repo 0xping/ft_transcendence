@@ -16,7 +16,10 @@ class App {
 
 	setupInitialState() {
 		this.store = {
-			profile: {},
+			profile: {
+				name: "ahmed",
+			},
+			signedIn: false,
 			darkMode: false,
 		};
 	}

@@ -2,7 +2,7 @@
 
 import BaseComponent from "../../components/BaseComponent.js";
 
-class SignInPage extends BaseComponent {
+class LoginPage extends BaseComponent {
 	_createInitialState() {
 		return {};
 	}
@@ -23,8 +23,8 @@ class SignInPage extends BaseComponent {
 }
 
 
-if (!customElements.get('Sign-in-page')) {
-	customElements.define('Sign-in-page', SignInPage);
+if (!customElements.get('login-page')) {
+	customElements.define('login-page', LoginPage);
 }
 
-export default SignInPage;
+export default LoginPage;
