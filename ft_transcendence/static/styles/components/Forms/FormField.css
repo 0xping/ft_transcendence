@@ -1,0 +1,35 @@
+@import "./input.css";
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  display: inline-block;
+}
+
+.field[type="checkbox"] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 0.4rem;
+  font: 10px;
+}
+
+.field[type="checkbox"] label {
+  color: #5c6474;
+  font-size: 0.9rem;
+}
+
+.field small {
+  float: right;
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--primary-red);
+}
+
+.field label {
+  margin-bottom: 0.5rem;
+}

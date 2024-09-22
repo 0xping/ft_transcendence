@@ -26,10 +26,6 @@ button.white {
   color: white;
 }
 
-button.intra span {
-  display: none;
-}
-
 button.intra {
   background-color: white;
   display: flex;
@@ -41,8 +37,18 @@ button.intra {
   gap: 10px;
 }
 
+button.intra span {
+  display: none;
+}
+
 button.intra img {
   width: 30px;
+}
+
+@media (min-width: 576px) {
+  button.intra {
+    display: block;
+  }
 }
 
 /* button[size="large"] {

@@ -54,9 +54,9 @@ class Router {
 				const componentElement = document.createElement(route.elementTag);
 				if (!globalStore.initialLoad) {
 					this.app.rootElement.appendChild(componentElement);
+					document.title = route.title;
+					this.updateMeta(route.meta);
 				}
-				document.title = route.title;
-				this.updateMeta(route.meta);
 			} catch (error) {
 				console.error('Error loading page:', error);
 				this.displayNotFound();

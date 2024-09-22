@@ -1,48 +1,64 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Home page {%endblock title %}
+{% block title %} Login  {% endblock title %}
 {% block description %} description {% endblock description %}
 {% block keywords %} keywords {% endblock keywords %}
 {% block styles %}
-	<link rel="stylesheet" href="{% static "pages/LoginPage/LoginPage.css" %}">
+    <link rel="stylesheet" href="{% static "pages/LoginPage/LoginPage.css" %}">
 {% endblock styles %}
 
-{%block content%}
+{% block content %}
 
-<login-page class="loginPage">
-	<div class="container" >
-	<h1>Welcome <span>Back</span></h1>
+<login-page >
+    <div class="container loginPage" >
+        <h1>Welcome <span>Back</span></h1>
 
-	<login-form>
-		<div class="loginForm">
-			<button class="intra"> <img src="{% static "assets/images/42logo.svg" %}"/> <span>sign in with your intra </span> </button>
-			<div class="divider">
-				<span class="divider-text">or</span>
-			  </div>
-			<form id="loginForm" autocomplete="off" novalidate >
-				<form-field class="field">
-					<label for="email">email address</label>
-					<input name="email" type="email" id="email" required></input>
-					<span></span>
-				</form-field>
-				<form-field class="field">
-					<label for="password">password</label>
-					<input name="password" type="password" id="password" required></input>
-					<span></span>
-					<a href="">forgot your password?</a>
-				</form-field>
+        <login-form>
+            <div class="loginCard">
+                <button class="intra">
+                    <img src="{% static "assets/images/42logo.svg" %}" alt="42 logo"/>
+                    <span>sign in with your intra</span>
+                </button>
+                <div class="divider">
+                    <span class="divider-text">or</span>
+                </div>
+                <form id="loginForm" autocomplete="off" novalidate>
+                    <form-field class="field" type="email">
+                        <div>
+                            <label for="email">Email</label>
+                            <small></small>
+                        </div>
+                        <input name="email" type="email" id="email" required>
+                    </form-field>
 
-				<form-field class="field">
-					<label for="remeberMe">	<input type="checkbox" id="remeberMe" name="remeberMe"/> remember me for 30 Days</label>
-				</form-field>
+                    <form-field class="field" type="password">
+                        <div>
+                            <label for="password">Password</label>
+                            <small></small>
+                        </div>
+                        <input name="password" type="password" id="password" required>
+                    </form-field>
+                    <span class="forgetPassword">
+                        <a href="/resetpassword/">Forgot your password?</a>
+                    </span>
 
-				<button class="primary" type="submit">log in</button>
-				<span>Don't have an account?</span>
-				<a href="">sign up</a>
-			</form>
-		</div>
-	</login-form>
-</div>
+                    <form-field class="field" type="checkbox">
+						<div>
+							<label for="rememberMe">Remember me for 30 Days</label>
+                            <small></small>
+                        </div>
+                        <input type="checkbox" id="rememberMe" name="rememberMe"/>
+                    </form-field>
+
+                    <button class="primary" type="submit">Log In</button>
+                    <span class="sign-up-link">
+                        Don't have an account?
+                        <a href="/signup/">Sign Up</a>
+                    </span>
+                </form>
+            </div>
+        </login-form>
+    </div>
 </login-page>
 
 {% endblock content %}

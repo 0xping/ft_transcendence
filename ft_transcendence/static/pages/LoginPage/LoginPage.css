@@ -1,30 +1,14 @@
 @import url("../../styles/components/button.css");
+@import url("../../styles/components/Forms/LoginCard.css");
 
 .loginPage h1 {
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
   font-size: clamp(30px, 5vw, 40px);
   text-align: center;
 }
 
 .loginPage h1 span {
   color: var(--primary);
-}
-
-.loginPage .loginForm {
-  background: var(--bg-secondary);
-  padding: 45px;
-  border-radius: 50px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.loginPage .loginForm button.intra {
-  margin: auto;
-  width: 100%;
-  max-width: 400px;
-}
-
-.loginPage .loginForm {
 }
 
 .divider {
