@@ -8,12 +8,11 @@
 {% endblock styles %}
 
 {% block content %}
-
 <login-page >
     <div class="container loginPage" >
         <h1>Welcome <span>Back</span></h1>
 
-        <login-form>
+        <login-card>
             <div class="loginCard">
                 <button class="intra">
                     <img src="{% static "assets/images/42logo.svg" %}" alt="42 logo"/>
@@ -23,32 +22,32 @@
                     <span class="divider-text">or</span>
                 </div>
                 <form id="loginForm" autocomplete="off" novalidate>
-                    <form-field class="field" type="email">
+                    <div class="field email" type="email" name="email">
                         <div>
                             <label for="email">Email</label>
-                            <small></small>
+                            <span id="emailError"></span>
                         </div>
                         <input name="email" type="email" id="email" required>
-                    </form-field>
+                    </div>
 
-                    <form-field class="field" type="password">
+                    <div class="field password" type="password" name="password">
                         <div>
                             <label for="password">Password</label>
-                            <small></small>
+                            <span  id="passwordError"></span>
                         </div>
                         <input name="password" type="password" id="password" required>
-                    </form-field>
+                    </div>
                     <span class="forgetPassword">
                         <a href="/resetpassword/">Forgot your password?</a>
                     </span>
 
-                    <form-field class="field" type="checkbox">
+                    <div class="field rememberMe"  type="checkbox" name="checkbox">
 						<div>
 							<label for="rememberMe">Remember me for 30 Days</label>
-                            <small></small>
+                            <span></span>
                         </div>
-                        <input type="checkbox" id="rememberMe" name="rememberMe"/>
-                    </form-field>
+                        <input name="rememberMe" type="checkbox" id="rememberMe" />
+                    </div>
 
                     <button class="primary" type="submit">Log In</button>
                     <span class="sign-up-link">
@@ -57,7 +56,7 @@
                     </span>
                 </form>
             </div>
-        </login-form>
+        </login-card>
     </div>
 </login-page>
 

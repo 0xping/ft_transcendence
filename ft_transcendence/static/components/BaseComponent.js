@@ -30,7 +30,11 @@ class BaseComponent extends HTMLElement {
 	async connectedCallback() {
 		if (!globalStore.initialLoad)
 			await this.render();
+		console.log("page renderd");
+
 		this.addEventListeners();
+		console.log("EventListeners added");
+
 	}
 
 	disconnectedCallback() {

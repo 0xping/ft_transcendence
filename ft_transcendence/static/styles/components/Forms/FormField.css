@@ -5,6 +5,12 @@
   flex-direction: column;
 }
 
+.field div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .field label {
   display: inline-block;
 }
@@ -23,7 +29,7 @@
   font-size: 0.9rem;
 }
 
-.field small {
+.field span {
   float: right;
   margin-right: 0.8rem;
   font-size: 0.8rem;

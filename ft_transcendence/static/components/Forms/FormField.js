@@ -2,15 +2,21 @@
 import BaseComponent from "../BaseComponent.js"
 
 class FormField extends BaseComponent {
+	constructor() {
+		super();
+		this.type = this.getAttribute("type");
+		this.isRequired = this.getAttribute("type");
+		this.name = this.getAttribute("name");
+	}
 	_createInitialState() {
-		return {};
+		return { showPassword: this.getAttribute("type") };
 	}
 
 	async render() {
 		this.innerHTML = `
 				<div>
-					<label for="email">Email</label>
-					<small></small>
+					<label for="">Email</label>
+					<span></span>
 				</div>
 				<input name="email" type="email" id="email" required>
 		`;
