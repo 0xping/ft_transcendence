@@ -2,8 +2,7 @@
 import BaseComponent from "../BaseComponent.js"
 
 class LoginCard extends BaseComponent {
-	constructor() {
-		super();
+	setProps() {
 		this.form = this.querySelector("#loginForm");
 		this.emailInput = this.querySelector(".email #email");
 		this.passwordInput = this.querySelector(".password #password");
@@ -12,7 +11,6 @@ class LoginCard extends BaseComponent {
 			email: this.querySelector("#emailError")
 		}
 	}
-
 
 	async render() {
 		this.innerHTML = `
@@ -33,11 +31,11 @@ class LoginCard extends BaseComponent {
 						<input name="email" type="email" id="email" required>
 					</div>
 					<div class="field password" type="password" required>
-						 <div>
-                            <label for="password">Password</label>
-                            <span id="emailPassword"></span>
-                        </div>
-                        <input name="password" type="password" id="password" required>
+						<div>
+							<label for="password">Password</label>
+							<span id="passwordError"></span>
+						</div>
+					<input name="password" type="password" id="password" required>
 					</div>
 
 					<span class="forgetPassword">
@@ -47,9 +45,9 @@ class LoginCard extends BaseComponent {
 					<div class="field rememberMe" type="checkbox">
 						<div>
 							<label for="rememberMe">Remember me for 30 Days</label>
-                            <span></span>
-                        </div>
-                        <input name="rememberMe" type="checkbox" id="rememberMe" />
+							<span></span>
+						</div>
+						<input name="rememberMe" type="checkbox" id="rememberMe" />
 					</div>
 
 					<button class="primary submitButton" type="submit">Log In</button>
@@ -86,8 +84,8 @@ class LoginCard extends BaseComponent {
 
 
 	validatePassword = () => {
-		const minLength = 5;
-		const maxLength = 15;
+		const minLength = 10;
+		const maxLength = 20;
 		const passwordValue = this.passwordInput.value.trim();
 		if (passwordValue === '')
 			this.showError("password", 'Password is required.');

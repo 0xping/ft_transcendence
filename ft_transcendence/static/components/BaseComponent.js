@@ -6,6 +6,7 @@ class BaseComponent extends HTMLElement {
 		this.delegatesFocus = true;
 		this._state = this._createInitialState(); // Initialize state as an instance property
 		this._renderFunctions = new Map(); // Initialize render functions map as an instance property
+		this.setProps();
 	}
 
 	get state() {
@@ -30,10 +31,12 @@ class BaseComponent extends HTMLElement {
 	async connectedCallback() {
 		if (!globalStore.initialLoad)
 			await this.render();
-		console.log("page renderd");
-
+		this.setProps();
 		this.addEventListeners();
-		console.log("EventListeners added");
+	}
+
+	//set all your properties here
+	setProps() {
 
 	}
 
