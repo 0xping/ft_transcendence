@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Sign up  {% endblock title %}
+{% block description %} description {% endblock description %}
+{% block keywords %} keywords {% endblock keywords %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static "pages/SignupPage/SignupPage.css" %}">
+{% endblock styles %}
+
+{% block content %}
+<signup-page >
+    <div class="container signupPage" >
+        <h1>lets Create an <span>account</span></h1>
+
+        <signup-card>
+            <div class="authCard signupCard">
+                <button class="intra">
+                    <img src="{% static "assets/images/42logo.svg" %}" alt="42 logo"/>
+                    <span>sign up with your intra</span>
+                </button>
+                <div class="divider">
+                    <span class="divider-text">or</span>
+                </div>
+                <form id="signupForm" autocomplete="off" novalidate>
+                    <div class="field username" type="text" name="username">
+                        <div>
+                            <label for="username">username</label>
+                            <span id="usernameError"></span>
+                        </div>
+                        <input name="username" type="username" id="username" required>
+                    </div>
+
+					<div class="field email" type="email" name="email">
+                        <div>
+                            <label for="email">Email</label>
+                            <span id="emailError"></span>
+                        </div>
+                        <input name="email" type="email" id="email" required>
+                    </div>
+
+                    <div class="field password" type="password" name="password">
+                        <div>
+                            <label for="password">Password</label>
+                            <span  id="passwordError"></span>
+                        </div>
+                        <input name="password" type="password" id="password" required>
+                    </div>
+
+                    <button class="primary" type="submit">sign up</button>
+                    <span class="sign-up-link">
+                        already have an account?
+                        <a href="/login/">login</a>
+                    </span>
+                </form>
+            </div>
+        </signup-card>
+    </div>
+</signup-page>
+
+{% endblock content %}
