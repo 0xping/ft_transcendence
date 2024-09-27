@@ -1,41 +1,41 @@
 @import "./FormField.css";
 
-.loginCard button.intra {
+.authCard button.intra {
   margin: auto;
   width: 100%;
   display: flex;
 }
 
-.loginCard form {
+.authCard form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-.loginCard form .forgetPassword {
+.authCard form .forgetPassword {
   display: inline-block;
   text-align: right;
   font-size: 0.8rem;
 }
 
-.loginCard form .forgetPassword a {
+.authCard form .forgetPassword a {
   opacity: 0.5;
   color: #8f8f8f;
 }
 
-.loginCard form .sign-up-link {
+.authCard form .sign-up-link {
   text-align: center;
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
-.loginCard form .sign-up-link a {
+.authCard form .sign-up-link a {
   color: var(--primary);
 }
-.loginCard form .sign-up-link a:hover {
+.authCard form .sign-up-link a:hover {
   opacity: 0.7;
 }
 
-.loginCard {
+.authCard {
   background: var(--bg-secondary);
   padding: clamp(30px, 5vw, 50px) clamp(20px, 6vw, 60px);
   border-radius: 30px;

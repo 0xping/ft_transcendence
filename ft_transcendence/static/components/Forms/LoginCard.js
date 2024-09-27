@@ -14,7 +14,7 @@ class LoginCard extends BaseComponent {
 
 	async render() {
 		this.innerHTML = `
-			<div class="loginCard">
+			<div class="authCard loginCard">
 				<button class="intra">
 					<img src="/static/assets/images/42logo.svg" alt="42 logo"/>
 					<span>sign in with your intra</span>

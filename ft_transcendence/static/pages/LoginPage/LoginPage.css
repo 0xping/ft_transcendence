@@ -1,5 +1,5 @@
 @import url("../../styles/components/button.css");
-@import url("../../styles/components/Forms/LoginCard.css");
+@import url("../../styles/components/Forms/authCard.css");
 
 .loginPage h1 {
   margin: 100px auto 50px auto;
