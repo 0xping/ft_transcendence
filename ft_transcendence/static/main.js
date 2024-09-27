@@ -15,19 +15,19 @@ let routes = {
 		],
 	},
 
-	'/games/<game_name>/match/<match_id>/': {
-		componentName: 'MatchPage',
-		elementTag: 'match-page',
-		title: 'match page',
+	'/login/': {
+		componentName: 'LoginPage',
+		elementTag: 'login-page',
+		title: 'log in page',
 		meta: [
 			{ description: 'Welcome to the match Page' },
 		],
 	},
 
-	'/login/': {
-		componentName: 'LoginPage',
-		elementTag: 'login-page',
-		title: 'log in page',
+	'/signup/': {
+		componentName: 'signupPage',
+		elementTag: 'signup-page',
+		title: 'signup page',
 		meta: [
 			{ description: 'Welcome to the match Page' },
 		],
