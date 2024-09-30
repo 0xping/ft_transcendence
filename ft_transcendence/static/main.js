@@ -25,7 +25,7 @@ let routes = {
 	},
 
 	'/signup/': {
-		componentName: 'signupPage',
+		componentName: 'SignupPage',
 		elementTag: 'signup-page',
 		title: 'signup page',
 		meta: [
