@@ -31,7 +31,16 @@ let routes = {
 		meta: [
 			{ description: 'Welcome to the match Page' },
 		],
+	},
+	'/dashboard/': {
+		componentName: 'DashboardPage',
+		elementTag: 'dashboard-page',
+		title: 'dashboard page',
+		meta: [
+			{ description: 'Welcome to the dashboard Page' },
+		],
 	}
+
 };
 
 

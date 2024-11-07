@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>dashboard</title>
-</head>
-<body>
-	<h1>dashboard<h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Dashboard page {% endblock title %}
+{% block description %} description {% endblock description %}
+{% block keywords %} keywords {% endblock keywords %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'pages/DashboardPage/DashboardPage.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<dashboard-page>
+	<profile-header>
+		<div>
+
+		</div>
+		<div>
+		</div>
+
+
+	</profile-header>
+</dashboard-page>
+{% endblock content %}
